@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Search Health-e Pro School Districts",
+        "description": "Enter part of your school district name to search Health-e Pro, or leave blank to fetch all available districts.",
+        "data": {
+          "search_query": "District search query (optional)",
+          "no_menu_message": "Message for days without a menu",
+          "scan_interval_hours": "Menu refresh interval (hours)"
+        }
+      },
+      "select_organization": {
+        "title": "Select School District",
+        "description": "Choose your school district (Organization).",
+        "data": {
+          "organization_id": "School District"
+        }
+      },
+      "select_schools": {
+        "title": "Select Schools",
+        "description": "Choose one or more schools in {district}.",
+        "data": {
+          "schools": "Schools"
+        }
+      },
+      "select_menus": {
+        "title": "Select Menus",
+        "description": "Choose one or more menus to track in {district}.",
+        "data": {
+          "menus": "Menus"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to menus.healthepro.com. Check network access and try again.",
+      "api_error": "Unexpected response from the Health-e Pro API.",
+      "no_organizations_found": "No matching school districts were found. Try another search query.",
+      "no_schools_found": "This school district has no published school sites.",
+      "no_schools_selected": "Select at least one school.",
+      "no_menus_found": "The selected school(s) do not have any published menus.",
+      "no_menus_selected": "Select at least one menu.",
+      "invalid_selection": "Invalid selection."
+    },
+    "abort": {
+      "already_configured": "This exact school and menu selection is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Configure Schools, Polling & Empty-Day Text",
+        "description": "Update which schools are tracked in this district, how often menus refresh from Health-e Pro, and the text returned on days with no menu.",
+        "data": {
+          "schools": "Schools",
+          "no_menu_message": "Message for days without a menu",
+          "scan_interval_hours": "Menu refresh interval (hours)"
+        }
+      },
+      "select_menus": {
+        "title": "Select Active Menus",
+        "description": "Choose one or more menus for the selected school(s).",
+        "data": {
+          "menus": "Menus"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to menus.healthepro.com.",
+      "api_error": "Unexpected response from the Health-e Pro API.",
+      "no_schools_selected": "Select at least one school.",
+      "no_menus_found": "No published menus were found for the selected school(s).",
+      "no_menus_selected": "Select at least one menu."
+    }
+  }
+}

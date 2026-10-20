@@ -1,0 +1,52 @@
+get_menus:
+  name: Get Menus
+  description: Fetch school menus for a single date (defaults to today when omitted) or a date range, optionally narrowed to a single menu, school, or district.
+  fields:
+    date:
+      name: Date
+      description: Optional target date in YYYY-MM-DD format. Defaults to today if no date or date range is specified.
+      required: false
+      example: "2026-10-20"
+      selector:
+        date:
+    start_date:
+      name: Start Date
+      description: Optional range start date in YYYY-MM-DD format (use with end_date instead of date).
+      required: false
+      example: "2026-10-19"
+      selector:
+        date:
+    end_date:
+      name: End Date
+      description: Optional range end date in YYYY-MM-DD format (use with start_date instead of date).
+      required: false
+      example: "2026-10-25"
+      selector:
+        date:
+    menu_id:
+      name: Menu ID
+      description: Optional Health-e Pro MENU_ID to narrow results to a single menu.
+      required: false
+      example: 137989
+      selector:
+        number:
+          min: 1
+          mode: box
+    school_id:
+      name: School ID
+      description: Optional Health-e Pro SCHOOL_ID to narrow results to a single school.
+      required: false
+      example: 2991
+      selector:
+        number:
+          min: 1
+          mode: box
+    organization_id:
+      name: Organization ID
+      description: Optional Health-e Pro ORGANIZATION_ID to filter by school district.
+      required: false
+      example: 327
+      selector:
+        number:
+          min: 1
+          mode: box

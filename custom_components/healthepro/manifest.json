@@ -1,0 +1,12 @@
+{
+  "domain": "healthepro",
+  "name": "Health-e Pro School Menus",
+  "codeowners": ["@phillg"],
+  "config_flow": true,
+  "documentation": "https://github.com/phillg/healthepro-homeassistant",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/phillg/healthepro-homeassistant/issues",
+  "requirements": [],
+  "version": "1.0.1"
+}
